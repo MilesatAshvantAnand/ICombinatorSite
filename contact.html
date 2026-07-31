@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — I Combinator</title>
+<meta name="description" content="Contact I Combinator — press, partnerships, speaking, venues, or general questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script defer src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">IC</span>
+      <span>I Combinator</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="events.html">Showcase &amp; Events</a>
+      <a href="companies.html">Companies</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <a class="btn" href="apply.html">Apply to join</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1>Get in touch.</h1>
+      <p class="lede">For press, partnerships, venues, speaking suggestions, or anything else.
+        If you want to join the circle, use the <a href="apply.html">application</a> instead.</p>
+    </div>
+  </div>
+
+  <section class="section wrap">
+    <div class="split">
+      <div>
+        <p class="eyebrow">Direct</p>
+        <p class="form-note"><a href="mailto:hello@icombinator.ie">hello@icombinator.ie</a></p>
+        <p class="form-note" style="margin-top:2rem">We answer press and partnership mail within a
+          few working days.</p>
+      </div>
+      <div>
+        <h2>Send a message.</h2>
+        <form class="form" data-form="Contact message" novalidate style="margin-top:2rem"
+              data-success="Message received. We'll reply to the address you gave.">
+          <div class="field-row">
+            <div class="field">
+              <label for="ct-name">Your name <span class="req" aria-hidden="true">*</span></label>
+              <input type="text" id="ct-name" name="name" required autocomplete="name">
+              <p class="error-msg" role="alert" hidden></p>
+            </div>
+            <div class="field">
+              <label for="ct-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="ct-email" name="email" required autocomplete="email">
+              <p class="error-msg" role="alert" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="ct-topic">What's this about? <span class="req" aria-hidden="true">*</span></label>
+            <select id="ct-topic" name="topic" required>
+              <option value="">Choose one</option>
+              <option>Press or media</option>
+              <option>Partnership or sponsorship</option>
+              <option>Offering a venue</option>
+              <option>Speaker suggestion</option>
+              <option>Attending an event</option>
+              <option>Something else</option>
+            </select>
+            <p class="error-msg" role="alert" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="ct-message">Message <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="ct-message" name="message" required data-minwords="10"></textarea>
+            <p class="error-msg" role="alert" hidden></p>
+          </div>
+
+          <div class="field consent">
+            <input type="checkbox" id="ct-consent" name="consent" required>
+            <label for="ct-consent">I'm happy for I Combinator to use these details to reply to me.</label>
+            <p class="error-msg" role="alert" hidden></p>
+          </div>
+
+          <div><button class="btn" type="submit" data-label="Send message">Send message</button></div>
+          <p class="status" role="status" tabindex="-1" hidden></p>
+          <p class="form-note">We use what you send only to reply. Nothing is shared with third
+            parties, and you can ask us to delete it at any time.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="split">
+      <div><p class="eyebrow">Mailing list</p></div>
+      <div>
+        <h2>Event announcements only.</h2>
+        <p class="measure">One email when a showcase or speaker night is announced. Nothing else.</p>
+        <form class="form" data-form="Newsletter signup" novalidate style="margin-top:2rem">
+          <div class="field">
+            <label for="ml-email">Email address <span class="req" aria-hidden="true">*</span></label>
+            <div class="subscribe">
+              <input type="email" id="ml-email" name="email" required autocomplete="email"
+                     placeholder="you@company.ie">
+              <button class="btn" type="submit" data-label="Subscribe">Subscribe</button>
+            </div>
+            <p class="error-msg" role="alert" hidden></p>
+          </div>
+          <div class="field consent">
+            <input type="checkbox" id="ml-consent" name="consent" required>
+            <label for="ml-consent">I'm happy to receive occasional emails about I Combinator
+              events. I can unsubscribe at any time.</label>
+            <p class="error-msg" role="alert" hidden></p>
+          </div>
+          <p class="status" role="status" tabindex="-1" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">IC</span>
+          <span>I Combinator</span>
+        </a>
+        <p class="form-note" style="margin-top:1rem">A national community for Ireland's young
+          founders and builders.</p>
+      </div>
+      <div>
+        <h4>Community</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="companies.html">Member companies</a></li>
+          <li><a href="apply.html">Apply to join</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Public</h4>
+        <ul>
+          <li><a href="events.html">Showcase &amp; events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@icombinator.ie">hello@icombinator.ie</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; <span data-year>2026</span> I Combinator. Ireland.</span>
+      <span>Applications are read by members of the circle.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply to join — I Combinator</title>
+<meta name="description" content="Apply to the I Combinator inner circle. Every application is read by a member. We reply either way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script defer src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">IC</span>
+      <span>I Combinator</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="events.html">Showcase &amp; Events</a>
+      <a href="companies.html">Companies</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="apply.html" aria-current="page">Apply to join</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Apply — inner circle</p>
+      <h1>Read by a member. Answered either way.</h1>
+      <p class="lede">There is no automated screen and no scoring form. A member of the circle reads
+        every application and replies within ten working days, including when the answer is no.</p>
+    </div>
+  </div>
+
+  <section class="section wrap">
+    <div class="split">
+      <div><p class="eyebrow">Before you start</p></div>
+      <div class="measure">
+        <h2>What we're actually looking for.</h2>
+        <ul class="check">
+          <li><strong>Something live.</strong> Users, revenue, a product people can use, or a
+            company already trading. Ideas on their own aren't enough yet.</li>
+          <li><strong>Early in your career.</strong> The circle is built for young founders —
+            students, dropouts and first-timers are all in scope.</li>
+          <li><strong>An Irish connection.</strong> Building in Ireland, or building from Ireland
+            for a market elsewhere.</li>
+          <li><strong>Willingness to give back.</strong> Members answer each other's questions
+            honestly. That obligation is the membership fee.</li>
+        </ul>
+        <h3 style="margin-top:2.5rem">Not a fit if</h3>
+        <p>You're looking for a channel to sell to other founders, you want the introductions
+          without answering anyone else's questions, or there's nothing built yet. None of those
+          are character judgements — they're just not what this room is for. The
+          <a href="events.html">public events</a> are open to everyone regardless.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="split">
+      <div><p class="eyebrow">The process</p></div>
+      <div class="measure">
+        <h2>What happens after you send it.</h2>
+        <div class="grid-2 numbered" style="margin-top:2rem">
+          <div class="card">
+            <h3>A member reads it</h3>
+            <p class="company__desc">Not a form-filter. Someone who has built something reads what
+              you wrote, in full.</p>
+          </div>
+          <div class="card">
+            <h3>A conversation</h3>
+            <p class="company__desc">If it's a possible fit, a half-hour call — about what you're
+              building and what you'd want from the circle.</p>
+          </div>
+          <div class="card">
+            <h3>A decision</h3>
+            <p class="company__desc">Within ten working days of the call. You get a real answer,
+              not silence.</p>
+          </div>
+          <div class="card">
+            <h3>An introduction</h3>
+            <p class="company__desc">If it's a yes, you're introduced to the circle directly and
+              invited to the next closed session.</p>
+          </div>
+        </div>
+        <p class="form-note" style="margin-top:2rem">The circle is kept deliberately small. We would
+          rather take one member a month and have the room stay useful than fill it and lose the
+          reason it works.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <p class="eyebrow">Application</p>
+    <h2>Tell us what you're building.</h2>
+    <p class="lede">Eight questions. Write them the way you'd explain it to another founder — plain,
+      specific, no pitch language.</p>
+
+    <form class="form" data-form="Inner circle application" novalidate style="margin-top:3rem"
+          data-success="Application received. A member of the circle will read it and reply within ten working days.">
+      <div class="field-row">
+        <div class="field">
+          <label for="ap-name">Your name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="ap-name" name="name" required autocomplete="name">
+          <p class="error-msg" role="alert" hidden></p>
+        </div>
+        <div class="field">
+          <label for="ap-email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="ap-email" name="email" required autocomplete="email">
+          <p class="error-msg" role="alert" hidden></p>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="ap-company">Company or project <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="ap-company" name="company" required>
+          <p class="error-msg" role="alert" hidden></p>
+        </div>
+        <div class="field">
+          <label for="ap-url">Link</label>
+          <input type="url" id="ap-url" name="url" placeholder="https://" inputmode="url">
+          <p class="hint">Website, app store listing, repo — whatever shows it best. Optional if
+            there isn't one yet.</p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="ap-stage">Where is it right now? <span class="req" aria-hidden="true">*</span></label>
+        <select id="ap-stage" name="stage" required>
+          <option value="">Choose one</option>
+          <option>Building — not launched yet</option>
+          <option>Launched — first users, no revenue</option>
+          <option>Revenue — paying customers</option>
+          <option>Funded — raised outside capital</option>
+          <option>Trading company — team in place</option>
+        </select>
+        <p class="error-msg" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="ap-building">What are you building, and who uses it?
+          <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="ap-building" name="building" required data-minwords="20"
+                  placeholder="What it does, who it's for, and what's actually live today."></textarea>
+        <p class="hint">A short paragraph. Concrete beats polished.</p>
+        <p class="error-msg" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="ap-why">What would you bring to the circle, and what do you need from it?
+          <span class="req" aria-hidden="true">*</span></label>
+        <textarea id="ap-why" name="why" required data-minwords="20"
+                  placeholder="What you can answer for other founders, and what you're currently stuck on."></textarea>
+        <p class="hint">The second half matters as much as the first. Nobody joins with nothing to ask.</p>
+        <p class="error-msg" role="alert" hidden></p>
+      </div>
+
+      <div class="field">
+        <label for="ap-referral">Does anyone in the circle know you?</label>
+        <input type="text" id="ap-referral" name="referral" placeholder="Name, or leave blank">
+        <p class="hint">Not required, and not weighted heavily. A referral from someone who can
+          honestly speak to your work counts; one from a stranger doesn't.</p>
+      </div>
+
+      <div class="field consent">
+        <input type="checkbox" id="ap-consent" name="consent" required>
+        <label for="ap-consent">I'm happy for I Combinator to store this application and contact me
+          about it. It won't be shared outside the circle.</label>
+        <p class="error-msg" role="alert" hidden></p>
+      </div>
+
+      <div>
+        <button class="btn" type="submit" data-label="Send application">Send application</button>
+      </div>
+      <p class="status" role="status" tabindex="-1" hidden></p>
+      <p class="form-note">We store what you send here only to review your application and reply.
+        Ask us to delete it at any time by emailing
+        <a href="mailto:hello@icombinator.ie">hello@icombinator.ie</a>.</p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">IC</span>
+          <span>I Combinator</span>
+        </a>
+        <p class="form-note" style="margin-top:1rem">A national community for Ireland's young
+          founders and builders.</p>
+      </div>
+      <div>
+        <h4>Community</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="companies.html">Member companies</a></li>
+          <li><a href="apply.html">Apply to join</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Public</h4>
+        <ul>
+          <li><a href="events.html">Showcase &amp; events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@icombinator.ie">hello@icombinator.ie</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; <span data-year>2026</span> I Combinator. Ireland.</span>
+      <span>Applications are read by members of the circle.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

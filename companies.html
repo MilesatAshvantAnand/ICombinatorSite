@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Member companies — I Combinator</title>
+<meta name="description" content="The companies built by founders in the I Combinator inner circle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script defer src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">IC</span>
+      <span>I Combinator</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="events.html">Showcase &amp; Events</a>
+      <a href="companies.html" aria-current="page">Companies</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="apply.html">Apply to join</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Member companies</p>
+      <h1>What the circle is building.</h1>
+      <p class="lede">Every company here is run by a member of the inner circle. The directory is
+        public on purpose — the point of the community is that the work is visible.</p>
+    </div>
+  </div>
+
+  <section class="section wrap">
+    <div class="filters" role="group" aria-label="Filter companies by sector">
+      <button class="filter" type="button" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" type="button" data-filter="software" aria-pressed="false">Software</button>
+      <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI</button>
+      <button class="filter" type="button" data-filter="consumer" aria-pressed="false">Consumer</button>
+    </div>
+    <p class="card__meta" id="company-count" role="status">4 companies</p>
+
+    <!-- TODO(owner): each entry needs the founder's name, a real one-line description and a live URL,
+         confirmed with the founder before publishing. Sectors below are placeholders. -->
+    <div class="grid-3" style="margin-top:2rem">
+      <article class="card company" data-sector="software">
+        <span class="company__logo" aria-hidden="true">K</span>
+        <h2 class="company__name">Krios</h2>
+        <p class="company__desc">Founding member company. One-line description to be confirmed with
+          the founder.</p>
+        <p class="company__founder">Founder — to be confirmed</p>
+      </article>
+
+      <article class="card company" data-sector="ai">
+        <span class="company__logo" aria-hidden="true">R</span>
+        <h2 class="company__name">Rhycon.ai</h2>
+        <p class="company__desc">Founding member company. One-line description to be confirmed with
+          the founder.</p>
+        <p class="company__founder">Founder — to be confirmed</p>
+      </article>
+
+      <article class="card company" data-sector="software">
+        <span class="company__logo" aria-hidden="true">M</span>
+        <h2 class="company__name">MTMN</h2>
+        <p class="company__desc">Founding member company. One-line description to be confirmed with
+          the founder.</p>
+        <p class="company__founder">Founder — to be confirmed</p>
+      </article>
+
+      <article class="card company" data-sector="consumer">
+        <span class="company__logo" aria-hidden="true">V</span>
+        <h2 class="company__name">Vano</h2>
+        <p class="company__desc">Founding member company. One-line description to be confirmed with
+          the founder.</p>
+        <p class="company__founder">Founder — to be confirmed</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="split">
+      <div><p class="eyebrow">Joining</p></div>
+      <div class="measure">
+        <h2>Your company could be on this page.</h2>
+        <p>The directory grows one member at a time, by application and personal review. If you're
+          building something in Ireland and already have it in people's hands, apply.</p>
+        <div class="btn-row">
+          <a class="btn" href="apply.html">Apply to join</a>
+          <a class="btn btn--ghost" href="about.html">How the circle works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">IC</span>
+          <span>I Combinator</span>
+        </a>
+        <p class="form-note" style="margin-top:1rem">A national community for Ireland's young
+          founders and builders.</p>
+      </div>
+      <div>
+        <h4>Community</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="companies.html">Member companies</a></li>
+          <li><a href="apply.html">Apply to join</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Public</h4>
+        <ul>
+          <li><a href="events.html">Showcase &amp; events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@icombinator.ie">hello@icombinator.ie</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; <span data-year>2026</span> I Combinator. Ireland.</span>
+      <span>Applications are read by members of the circle.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

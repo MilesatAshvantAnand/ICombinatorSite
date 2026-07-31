@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Showcase &amp; Events — I Combinator</title>
+<meta name="description" content="Public showcases, speaker evenings and meetups run by I Combinator across Ireland. Free to attend, open to anyone building or thinking about it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/site.css">
+<script defer src="assets/js/site.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap site-head__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">IC</span>
+      <span>I Combinator</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+    <nav class="nav" id="primary-nav" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="events.html" aria-current="page">Showcase &amp; Events</a>
+      <a href="companies.html">Companies</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="apply.html">Apply to join</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <p class="eyebrow">Public programme</p>
+      <h1>Open events, run by the circle.</h1>
+      <p class="lede">Everything on this page is free and open to the public. Members speak on
+        behalf of I Combinator — you will not be pitched a product.</p>
+    </div>
+  </div>
+
+  <section class="section wrap">
+    <p class="eyebrow">Formats</p>
+    <h2>Three kinds of night.</h2>
+    <div class="grid-3 numbered" style="margin-top:2.5rem">
+      <div class="card">
+        <h3>The Showcase</h3>
+        <p class="company__desc">Member companies and invited builders demo what they've shipped
+          this quarter. Real products, live, with the numbers behind them where founders are willing
+          to share.</p>
+        <p class="card__meta">Quarterly · 90 minutes</p>
+      </div>
+      <div class="card">
+        <h3>Speaker evening</h3>
+        <p class="company__desc">One member, one topic, told properly — first ten customers, a
+          failed hire, what a term sheet actually cost. Followed by open questions.</p>
+        <p class="card__meta">Monthly · 60 minutes</p>
+      </div>
+      <div class="card">
+        <h3>Builders' meetup</h3>
+        <p class="company__desc">No stage. For students, first-time builders and anyone deciding
+          whether to start. Members come to answer questions, not to present.</p>
+        <p class="card__meta">Rolling · by city</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <p class="eyebrow">Upcoming</p>
+    <h2>What's next.</h2>
+    <!-- TODO(owner): replace with confirmed dates and venues before sharing publicly.
+         Each .event block is one listing; remove the founding-year note once dates are real. -->
+    <div style="margin-top:2.5rem">
+      <article class="event">
+        <div class="event__date">Autumn<span>Date to be confirmed</span></div>
+        <div class="event__body">
+          <h3>The Founding Showcase — Dublin</h3>
+          <p>The first public I Combinator event. Founding member companies demo what they're
+            building, followed by open questions and an hour of unstructured time.</p>
+          <p class="card__meta">Dublin · Free · Registration opens with the date</p>
+        </div>
+        <div><a class="btn btn--ghost" href="#register">Get notified</a></div>
+      </article>
+      <article class="event">
+        <div class="event__date">Rolling<span>By city</span></div>
+        <div class="event__body">
+          <h3>Builders' meetups — Cork, Galway, Limerick</h3>
+          <p>Informal evenings for people building outside Dublin. Announced to the mailing list
+            first, usually two to three weeks ahead.</p>
+          <p class="card__meta">Nationwide · Free</p>
+        </div>
+        <div><a class="btn btn--ghost" href="#register">Get notified</a></div>
+      </article>
+    </div>
+    <p class="form-note" style="margin-top:2rem">I Combinator is in its founding year. Dates are
+      announced to the mailing list before they go anywhere else — that list is the honest way to
+      hear about the first events.</p>
+  </section>
+
+  <section class="section wrap">
+    <div class="split">
+      <div><p class="eyebrow">Speaking</p></div>
+      <div class="measure">
+        <h2>What speakers are asked to do.</h2>
+        <ul class="check">
+          <li>Bring one specific thing you learned the hard way, with the detail intact.</li>
+          <li>Use real numbers wherever you're allowed to.</li>
+          <li>No product pitch, no hiring pitch, no fundraising pitch.</li>
+          <li>Stay for the questions — that's the part the room came for.</li>
+        </ul>
+        <p style="margin-top:2rem">Want to suggest a speaker or host an event in your city?
+          <a href="contact.html">Get in touch</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap" id="register">
+    <div class="split">
+      <div><p class="eyebrow">Get notified</p></div>
+      <div>
+        <h2>Hear about events first.</h2>
+        <p class="measure">One email per announcement. No newsletter, no digest, no sharing your
+          address with anyone else.</p>
+        <form class="form" data-form="Event notifications" novalidate style="margin-top:2rem">
+          <div class="field">
+            <label for="ev-email">Email address <span class="req" aria-hidden="true">*</span></label>
+            <div class="subscribe">
+              <input type="email" id="ev-email" name="email" required autocomplete="email"
+                     placeholder="you@company.ie">
+              <button class="btn" type="submit" data-label="Notify me">Notify me</button>
+            </div>
+            <p class="error-msg" role="alert" hidden></p>
+          </div>
+          <div class="field">
+            <label for="ev-city">Which city are you nearest?</label>
+            <select id="ev-city" name="city">
+              <option value="">No preference</option>
+              <option>Dublin</option>
+              <option>Cork</option>
+              <option>Galway</option>
+              <option>Limerick</option>
+              <option>Elsewhere in Ireland</option>
+            </select>
+          </div>
+          <div class="field consent">
+            <input type="checkbox" id="ev-consent" name="consent" required>
+            <label for="ev-consent">I'm happy to receive emails about I Combinator events. I can
+              unsubscribe at any time.</label>
+            <p class="error-msg" role="alert" hidden></p>
+          </div>
+          <p class="status" role="status" tabindex="-1" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">IC</span>
+          <span>I Combinator</span>
+        </a>
+        <p class="form-note" style="margin-top:1rem">A national community for Ireland's young
+          founders and builders.</p>
+      </div>
+      <div>
+        <h4>Community</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="companies.html">Member companies</a></li>
+          <li><a href="apply.html">Apply to join</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Public</h4>
+        <ul>
+          <li><a href="events.html">Showcase &amp; events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hello@icombinator.ie">hello@icombinator.ie</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; <span data-year>2026</span> I Combinator. Ireland.</span>
+      <span>Applications are read by members of the circle.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
