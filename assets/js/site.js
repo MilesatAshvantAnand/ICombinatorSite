@@ -4,9 +4,10 @@
 (() => {
   'use strict';
 
-  // TODO(owner): paste a Formspree/Basin/Tally endpoint here to receive submissions in-app.
-  const FORM_ENDPOINT = '';
-  const CONTACT_EMAIL = 'hello@icombinator.ie';
+  // FormSubmit requires no account: the first submission sends a one-time confirmation
+  // email to CONTACT_EMAIL which must be clicked before further submissions are delivered.
+  const FORM_ENDPOINT = 'https://formsubmit.co/ajax/icombinatorireland@gmail.com';
+  const CONTACT_EMAIL = 'icombinatorireland@gmail.com';
 
   /* ---------- mobile nav ---------- */
   const toggle = document.querySelector('.nav-toggle');
