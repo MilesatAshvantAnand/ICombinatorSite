@@ -114,18 +114,28 @@
       if (FORM_ENDPOINT) {
         if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
         try {
+          const payload = { _subject: subject, _template: 'table', _captcha: 'false', ...data };
+          if (data.email) payload._replyto = data.email;          // let the team hit "reply" directly
+          if (form.dataset.autoresponse) payload._autoresponse = form.dataset.autoresponse;
+
           const res = await fetch(FORM_ENDPOINT, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify({ _subject: subject, ...data }),
+            body: JSON.stringify(payload),
           });
-          if (!res.ok) throw new Error('Request failed: ' + res.status);
+          let json = null;
+          try { json = await res.json(); } catch (_) { /* non-JSON body */ }
+          // FormSubmit can return HTTP 200 with success:false (e.g. pending inbox activation) —
+          // trusting res.ok alone silently drops those as false positives.
+          if (!res.ok || (json && json.success === false)) {
+            throw new Error((json && json.message) || `request failed (${res.status})`);
+          }
           form.reset();
           if (status) { status.hidden = false; status.textContent = form.dataset.success ||
             'Received. We read every submission and will reply directly.'; status.focus(); }
         } catch (err) {
           if (status) { status.hidden = false;
-            status.textContent = `Could not submit automatically. Please email ${CONTACT_EMAIL} instead.`;
+            status.textContent = `Could not submit automatically (${err.message}). Please email ${CONTACT_EMAIL} instead.`;
             status.focus(); }
         } finally {
           if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Submit'; }
@@ -135,7 +145,7 @@
 
       // Fallback: no endpoint configured — hand off to the user's mail client.
       const body = Object.entries(data)
-        .filter(([k]) => k !== 'consent')
+        .filter(([k]) => k !== 'consent' && k !== '_honey')
         .map(([k, v]) => `${k}: ${v}`).join('\n');
       window.location.href =
         `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

@@ -106,7 +106,9 @@
       specific, no pitch language.</p>
 
     <form class="form" data-form="Inner circle application" novalidate style="margin-top:3rem"
-          data-success="Application received. A member of the circle will read it and reply within ten working days.">
+          data-success="Application received. A member of the circle will read it and reply within ten working days."
+          data-autoresponse="Thanks for applying to I Combinator. A member of the circle reads every application in full and will reply within ten working days, including if the answer is no.">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="field-row">
         <div class="field">
           <label for="ap-name">Your name <span class="req" aria-hidden="true">*</span></label>
@@ -150,7 +152,7 @@
       <div class="field">
         <label for="ap-building">What are you building, and who uses it?
           <span class="req" aria-hidden="true">*</span></label>
-        <textarea id="ap-building" name="building" required data-minwords="20"
+        <textarea id="ap-building" name="building" required data-minwords="8"
                   placeholder="What it does, who it's for, and what's actually live today."></textarea>
         <p class="hint">A short paragraph. Concrete beats polished.</p>
         <p class="error-msg" role="alert" hidden></p>
@@ -159,7 +161,7 @@
       <div class="field">
         <label for="ap-why">What would you bring to the circle, and what do you need from it?
           <span class="req" aria-hidden="true">*</span></label>
-        <textarea id="ap-why" name="why" required data-minwords="20"
+        <textarea id="ap-why" name="why" required data-minwords="8"
                   placeholder="What you can answer for other founders, and what you're currently stuck on."></textarea>
         <p class="hint">The second half matters as much as the first. Nobody joins with nothing to ask.</p>
         <p class="error-msg" role="alert" hidden></p>

@@ -52,7 +52,9 @@
       <div>
         <h2>Send a message.</h2>
         <form class="form" data-form="Contact message" novalidate style="margin-top:2rem"
-              data-success="Message received. We'll reply to the address you gave.">
+              data-success="Message received. We'll reply to the address you gave."
+              data-autoresponse="Thanks for reaching out to I Combinator. We read every message and aim to reply within a few working days.">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="field-row">
             <div class="field">
               <label for="ct-name">Your name <span class="req" aria-hidden="true">*</span></label>
@@ -82,7 +84,7 @@
 
           <div class="field">
             <label for="ct-message">Message <span class="req" aria-hidden="true">*</span></label>
-            <textarea id="ct-message" name="message" required data-minwords="10"></textarea>
+            <textarea id="ct-message" name="message" required data-minwords="4"></textarea>
             <p class="error-msg" role="alert" hidden></p>
           </div>
 
@@ -107,7 +109,9 @@
       <div>
         <h2>Event announcements only.</h2>
         <p class="measure">One email when a showcase or speaker night is announced. Nothing else.</p>
-        <form class="form" data-form="Newsletter signup" novalidate style="margin-top:2rem">
+        <form class="form" data-form="Newsletter signup" novalidate style="margin-top:2rem"
+              data-autoresponse="Thanks for subscribing to I Combinator updates. We'll only email when there's a real event to announce.">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="field">
             <label for="ml-email">Email address <span class="req" aria-hidden="true">*</span></label>
             <div class="subscribe">
