@@ -1,5 +1,5 @@
-// Smoke test, no dependencies: asserts the homepage links to I Combinator's
-// LinkedIn company page, just below the header, with safe target/rel attributes.
+// Smoke test, no dependencies: asserts the homepage hero has a square LinkedIn
+// button beside "See public events", pointing at the company page safely.
 // Run: node tests/linkedin-link.test.js
 const fs = require('fs');
 const path = require('path');
@@ -13,27 +13,25 @@ function assert(cond, message) {
   else { console.log(`PASS: ${message}`); }
 }
 
-const headerEnd = html.indexOf('</header>');
-const mainStart = html.indexOf('<main id="main">');
-assert(headerEnd !== -1, 'index.html has a </header> closing tag');
-assert(mainStart !== -1, 'index.html has a <main id="main"> tag');
-assert(headerEnd !== -1 && mainStart !== -1 && headerEnd < mainStart,
-  'header closes before <main> opens');
+const rowMatch = html.match(/<div class="btn-row">[\s\S]*?<\/div>/);
+assert(!!rowMatch, 'hero .btn-row exists');
+const row = rowMatch ? rowMatch[0] : '';
 
-const betweenHeaderAndMain = (headerEnd !== -1 && mainStart !== -1)
-  ? html.slice(headerEnd, mainStart) : '';
+assert(/See public events/.test(row), '"See public events" button is in the hero btn-row');
 
-const linkMatch = betweenHeaderAndMain.match(
-  /<a\s+href="([^"]+)"([^>]*)>[\s\S]*?LinkedIn[\s\S]*?<\/a>/i
-);
-assert(!!linkMatch, 'a LinkedIn link exists between the header and <main>');
+const linkMatch = row.match(/<a\s+class="([^"]*)"\s+href="([^"]+)"([^>]*)>[\s\S]*?<\/a>/g) || [];
+const linkedinTag = linkMatch.find(tag => tag.includes(EXPECTED_URL));
+assert(!!linkedinTag, 'a link to the LinkedIn company page exists in the hero btn-row');
 
-if (linkMatch) {
-  const [, href, attrs] = linkMatch;
-  assert(href === EXPECTED_URL, `link href is exactly "${EXPECTED_URL}" (got "${href}")`);
-  assert(/target="_blank"/.test(attrs), 'link opens in a new tab (target="_blank")');
-  assert(/rel="[^"]*noopener[^"]*"/.test(attrs), 'link has rel="noopener" to prevent tab-nabbing');
+if (linkedinTag) {
+  assert(/class="[^"]*btn--square[^"]*"/.test(linkedinTag), 'LinkedIn link uses the btn--square class');
+  assert(/target="_blank"/.test(linkedinTag), 'link opens in a new tab (target="_blank")');
+  assert(/rel="[^"]*noopener[^"]*"/.test(linkedinTag), 'link has rel="noopener" to prevent tab-nabbing');
+  assert(/aria-label="[^"]+"/.test(linkedinTag), 'icon-only button has an aria-label for screen readers');
 }
+
+assert(/\.btn--square\s*\{/.test(fs.readFileSync(path.join(__dirname, '..', 'assets/css/site.css'), 'utf8')),
+  'assets/css/site.css defines a .btn--square rule');
 
 if (process.exitCode === 1) {
   console.error('\nLinkedIn link test FAILED');
